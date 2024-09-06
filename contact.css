@@ -1,0 +1,718 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+html, body{
+    box-sizing: border-box; 
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin: 0;
+    background-image: url(1x/tv-bg.png);
+    /* width: 100vw;
+    height: 100vh; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+}
+body{
+    /* background-color: black; */
+    width: 100vw;
+    min-height: 100vh;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+/*-------FRAME-------*/
+.frame {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 5;
+    /* gắn link cho TV */
+	pointer-events:none;
+}
+.top, .middle, .bottom {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+}
+.square{
+    background-color: rgba(181, 169, 255, 1); 
+    width: 3px;
+    height: 3px;
+    opacity: 0;
+    margin: 2px 0;
+}
+.top, .top-left, .top-right{
+    display: flex;
+    /* gắn link cho TV */
+    pointer-events: all;
+}
+.top{
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100vw;
+    height: 20vh;
+}
+.top-left{
+    align-items: flex-start;
+    padding-top: 10px;
+}
+img {
+    object-fit: contain;
+    display: inline-block;
+}
+.logo{
+    object-fit: contain;
+    display: inline-block;
+    width: auto; 
+    height: auto;
+    margin-left: 10px;
+}
+.squares{
+    margin: 0;
+    display: flex;
+}
+#squares-1{
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 15px;
+
+}
+#top-square-1, #top-square-2, #top-square-3{
+    background-color: rgba(202, 253, 255, 1);
+}
+#top-square-1{
+    animation: square-fade 3s 1s ease-in-out infinite;
+}
+#top-square-2{
+    animation: square-fade 2s 1s ease-in-out infinite;
+}
+#top-square-3{
+    animation: square-fade 5s 1s ease-in-out infinite;
+}
+.play-button-frame{
+    object-fit: contain;
+    display: inline-block;
+    width: auto; 
+    height: auto;
+    margin-top: 15px;
+    margin-left: 5px;
+}
+.name-frame-container{
+    display: flex;
+    flex-direction: column;
+}
+.rec-container{
+    display: flex;
+    flex-direction: row;
+    margin-left: 54%;
+}
+.rec-1, .rec-2, .rec-3, .rec-4, .rec-5, .rec-6{
+    width: 2px;
+    height: 10px;
+    background-color: rgba(181, 169, 255, 1);
+    margin-right: 5px;
+    transform: rotate(-30deg);
+    animation: rec-fade 6s infinite;
+    opacity: 0;
+}
+.rec-1{
+    animation-delay: 0s;
+}
+.rec-2{
+    animation-delay: 1s;
+}
+.rec-3{
+    animation-delay: 2s;
+}
+.rec-4{
+    animation-delay: 3s;
+}
+.rec-5{
+    animation-delay: 4s;
+}
+.rec-6{
+    animation-delay: 5s;
+}
+
+@keyframes rec-fade{
+    0%, 100% { opacity: 0.2; }
+    25% { opacity: 1; }
+    50% { opacity: 0; }
+}
+.name-frame{
+    object-fit: contain;
+    display: inline-block;
+    width: auto; 
+    height: auto;
+    margin-left: 10px;
+    position: relative;
+}
+#squares-2{
+    margin-top: 10px;
+}
+#top-square-4, #top-square-5{
+    margin-left: 3px;
+}
+#top-square-4{
+    width: 3px;
+    height: 5px;
+    animation: square-fade 3.5s 1s ease-in-out infinite;
+    opacity: 0;
+}
+#top-square-5{
+    width: 5px;
+    height: 5px;
+    animation: square-fade 6s 1s ease-in-out infinite;
+    opacity: 0;
+}
+@keyframes square-fade{
+    50%{
+        opacity: 1;
+    }
+}
+.top-right {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 0; 
+}
+
+.nav{
+    margin-top: 20px;
+    padding: 0;
+}
+.nav .ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+.nav .li {
+    font-family: Orbitron;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: lowercase;
+    margin-right: 15px;
+}
+.nav .li a{
+    color: white;
+    padding: 5px;
+    text-decoration: none;
+    border-color: rgba(181, 169, 255, 1);
+    border-width: 1.5px;
+    border-style: solid;
+    border-radius: 13px 3px 3px 3px;
+}
+.li.contact a {
+    background-color: rgb(151, 0, 211);
+}
+.nav .ul .li:last-child {
+    margin-right: 0;
+}
+
+.shuffle {
+    display: inline-block;
+    position: relative;
+    transition: all 0.1s ease-in-out;
+    cursor: pointer;
+}
+.shuffle:hover{
+    font-size: 22px;
+}
+.contact{
+    border-color: rgba(181, 169, 255, 1);
+    margin-right: 10px;
+}
+.middle, .middle-left, .middle-right{
+    display: flex;
+}
+.middle{
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 5px;
+    width: 100vw;
+    height: 60vh;
+}
+.middle-left{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#squares-3{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+#square-6{
+    animation: square-fade 5.2s 1s ease-in-out infinite;
+}
+#square-7{
+    animation: square-fade 2.6s 1s ease-in-out infinite;
+    
+}
+#square-8{
+    animation: square-fade 4.5s 1s ease-in-out infinite;
+    
+}
+.star-left{
+    object-fit: contain;
+    display: inline-block;
+    width: auto; 
+    height: auto;
+}
+#squares-4{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+#square-9{
+    animation: square-fade 1.8s 1s ease-in-out infinite;
+}
+#square-10{
+    animation: square-fade 3.6s 1s ease-in-out infinite;  
+}
+#square-11{
+    animation: square-fade 2.8s 1s ease-in-out infinite; 
+}
+.barcode{
+    object-fit: contain;
+    display: inline-block;
+    width: auto; 
+    height: auto;
+}
+.middle-right{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#squares-5, #squares-6, #squares-7{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+#square-12{
+    animation: square-fade 1.8s 1s ease-in-out infinite;
+}
+#square-13{
+    animation: square-fade 3.6s 1s ease-in-out infinite; 
+}
+#square-14{
+    animation: square-fade 2.8s 1s ease-in-out infinite; 
+}
+.ticket{
+    object-fit: contain;
+    display: inline-block;
+    width: auto; 
+    height: auto;
+}
+#square-15{
+    animation: square-fade 2.4s 1s ease-in-out infinite;
+}
+#square-16{
+    animation: square-fade 3s 1s ease-in-out infinite; 
+}
+#square-17{
+    animation: square-fade 4.2s 1s ease-in-out infinite; 
+}
+.star-right{
+    object-fit: contain;
+    display: inline-block;
+    width: auto; 
+    height: auto;
+}
+#square-18{
+    animation: square-fade 3s 1s ease-in-out infinite;
+}
+#square-19{
+    animation: square-fade 4.2s 1s ease-in-out infinite; 
+}
+#square-20{
+    animation: square-fade 1.6s 1s ease-in-out infinite; 
+}
+.bottom, .bottom-left, .bottom-left-1, .bottom-left-2, .bottom-left-3, .bottom-right{
+    display: flex;
+}
+.bottom{
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100vw;
+    height: 20vh;
+}
+.bottom-left{
+    align-items: flex-end;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+.bottom-left-1{
+    align-items: center;
+}
+#square-21{
+    align-self: flex-start;
+    margin: 0 2px;
+    animation: square-fade 1s 1s ease-in-out infinite;
+}
+.developed{
+    object-fit: contain;
+    width: auto;
+    height: auto;
+    display: inline-block;
+}
+.bottom-left-2{
+    align-items: center;
+    margin-left: 50px;
+}
+#square-22{
+    align-self: flex-start;
+    margin: 0 2px;
+    animation: square-fade 2s 1s ease-in-out infinite;
+}
+#square-23{
+    align-self: flex-start;
+    margin: 0 2px;
+    animation: square-fade 1.4s 1s ease-in-out infinite;
+}
+.location{
+    object-fit: contain;
+    width: auto;
+    height: auto;
+    display: inline-block;
+}
+.bottom-left-3{
+    flex-direction: row;
+    align-items: center;
+    margin-left: 150px;
+}
+#square-24, #square-25{
+    width: 40px;
+    height: 2px;
+    margin: 0 15px;
+    animation: square-fade 2s 1s ease-in-out infinite;
+    border-radius: 20px;
+}
+.joe{
+    font-family: DotGothic16;
+    font-size: 12px;
+    color: rgba(181, 169, 255, 1);
+}
+.bottom-right{
+    flex-direction: row;
+    align-items: flex-end;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+.birth, .spinning-sphere{
+    object-fit: contain;
+    width: auto;
+    height: auto;
+}
+.spinning-sphere{
+    margin-left: 10px;
+}
+
+/*      content       */
+.phone-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    animation: open-page-fade-in 0.8s ease-out;  
+
+}
+@keyframes open-page-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.phone-contact {
+    object-fit: contain;
+    width: 40vw;
+    height: auto;
+    z-index: 1;
+    position: relative;
+}
+
+.logos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.logos img {
+    width: 5vw;
+    height: auto;
+    margin: 5px;
+    object-fit: contain;
+}
+.fb-logo {
+    transform: translate(4.5vw, -0.5vw) rotate(-30deg);
+    transition: transform 0.2s ease-in-out;
+    transform-origin: center center;
+}
+.fb-logo:hover {
+    transform: translate(4.5vw, -0.5vw) rotate(-30deg) scale(1.25);
+}
+
+.insta-logo {
+    transform: translate(4.8vw, -3.8vw) rotate(-15deg);
+    transition: transform 0.2s ease-in-out;
+    transform-origin: center center;
+}
+.insta-logo:hover {
+    transform: translate(4.8vw, -3.8vw) rotate(-15deg) scale(1.25);
+}
+
+.mail-logo {
+    transform: translate(5.5vw, -5.5vw);
+    transition: transform 0.2s ease-in-out;
+    transform-origin: center center;
+}
+.mail-logo:hover {
+    transform: translate(5.5vw, -5.5vw) scale(1.25);
+}
+
+.linkedin-logo {
+    transform: translate(6vw, -3.5vw) rotate(15deg);
+    transition: transform 0.2s ease-in-out;
+    transform-origin: center center;
+}
+.linkedin-logo:hover {
+    transform: translate(6vw, -3.5vw) rotate(15deg) scale(1.25);
+}
+
+.behance-logo {
+    transform: translate(6.5vw, -0.5vw) rotate(30deg);
+    transition: transform 0.2s ease-in-out;
+    transform-origin: center center;
+}
+.behance-logo:hover {
+    transform: translate(6.5vw, -0.5vw) rotate(30deg) scale(1.25);
+}
+
+.frame-top{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-grow: wrap;
+    margin-top: 4vw;
+    flex-grow: 1;
+    width: 100vw;
+    height: 42vh;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    animation: open-page-fade-in 0.8s ease-out;  
+}
+@keyframes open-page-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* CSS for page-transition */
+  #preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    display: none; /* Hidden by default */
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease-out;
+}
+#Matrix {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+}
+canvas {
+    width: 100%;
+    height: 100%;
+}
+svg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+    z-index: 6;
+  }
+  
+  /* Styling the lines within the SVG */
+  line {
+    stroke-width: 20;
+    stroke-linecap: round;
+    z-index: 6;
+  }
+
+
+  svg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+    z-index: 6;
+  }
+  
+  /* Styling the lines within the SVG */
+  line {
+    stroke-width: 20;
+    stroke-linecap: round;
+    z-index: 6;
+  }
+@media (max-width: 768px){
+    .barcode, .ticket{
+        width: 30px;
+    }
+    .phone-contact {
+        object-fit: contain;
+        width: 50vw;
+        height: auto;
+        z-index: 1;
+        position: relative;
+    }
+    .logos img {
+        width: 6vw;
+        height: auto;
+        margin: 5px;
+        object-fit: contain;
+    }
+    .fb-logo {
+        transform: translate(4.5vw, 0.5vw) rotate(-30deg);
+        transition: transform 0.2s ease-in-out;
+        transform-origin: center center;
+    }
+    .fb-logo:hover {
+        transform: translate(4.5vw, 0.5vw) rotate(-30deg) scale(1.25);
+    }
+}
+@media (max-width: 480px){
+    .logo, .play-button-frame{
+        width: 30px;
+    }
+    .play-button-frame, #squares-1{
+        margin-top: 10px;
+    }
+    .name-frame-container, #squares-2{
+        display: none;
+    }
+    .nav{
+        margin-top: 15px;
+        padding: 0;
+    }
+    .nav .li {
+        font-size: 12px;
+        letter-spacing: 2px;
+        margin-right: 5px;
+    }
+    .nav .li a{
+        padding: 4px;
+        border-width: 1.5px;
+    }
+    .developed, .location{
+        width: 80px;
+    }
+    .bottom-left-2{
+        margin-left: 10px;
+    }
+    .bottom-left-3{
+        display: none;
+    }
+    .phone-contact {
+        object-fit: contain;
+        width: 65vw;
+        height: auto;
+        z-index: 1;
+        position: relative;
+    }
+    .logos img {
+        width: 8vw;
+        height: auto;
+        margin: 5px;
+        object-fit: contain;
+    }
+    .fb-logo {
+        transform: translate(8vw, 4vw) rotate(-30deg);
+        transition: transform 0.2s ease-in-out;
+        transform-origin: center center;
+    }
+    .fb-logo:hover {
+        transform: translate(8vw, 4vw) rotate(-30deg) scale(1.25);
+    }
+    
+    .insta-logo {
+        transform: translate(4.8vw, -4.5vw) rotate(-15deg);
+        transition: transform 0.2s ease-in-out;
+        transform-origin: center center;
+    }
+    .insta-logo:hover {
+        transform: translate(4.8vw, -4.5vw) rotate(-15deg) scale(1.25);
+    }
+    
+    .mail-logo {
+        transform: translate(5.5vw, -8.5vw);
+        transition: transform 0.2s ease-in-out;
+        transform-origin: center center;
+    }
+    .mail-logo:hover {
+        transform: translate(5.5vw, -8.5vw) scale(1.25);
+    }
+    
+    .linkedin-logo {
+        transform: translate(6vw, -5.5vw) rotate(15deg);
+        transition: transform 0.2s ease-in-out;
+        transform-origin: center center;
+    }
+    .linkedin-logo:hover {
+        transform: translate(6vw, -5.5vw) rotate(15deg) scale(1.25);
+    }
+    
+    .behance-logo {
+        transform: translate(6.5vw, 0vw) rotate(30deg);
+        transition: transform 0.2s ease-in-out;
+        transform-origin: center center;
+    }
+    .behance-logo:hover {
+        transform: translate(6.5vw, 0vw) rotate(30deg) scale(1.25);
+    }
+    
+}

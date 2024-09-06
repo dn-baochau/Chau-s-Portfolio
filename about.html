@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - About</title>
+    <link rel="stylesheet" href="about.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Libre+Barcode+128+Text&family=Monomaniac+One&family=Monsieur+La+Doulaise&family=Orbitron:wght@400..900&family=Oswald:wght@200..700&family=Pinyon+Script&family=Playwrite+FR+Moderne:wght@100..400&family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="preloader">
+        <canvas id="Matrix"></canvas>
+    </div>
+    <main>
+        <div class="frame">
+            <div class="top">
+                <div class="top-left">
+                    <a href="index.html">
+                        <img class="logo" src="1x/logo.png" alt="Logo">
+                    </a>
+                    <div class="squares" id="squares-1">
+                        <div class="square" id="top-square-1"></div>
+                        <div class="square" id="top-square-2"></div>
+                        <div class="square" id="top-square-3"></div>
+                    </div>
+                    <img class="play-button-frame" src="1x/play-button-frame.png">
+                    <div class="name-frame-container">
+                        <div class="rec-container">
+                            <div class="rec-1"></div>
+                            <div class="rec-2"></div>
+                            <div class="rec-3"></div>
+                            <div class="rec-4"></div>
+                            <div class="rec-5"></div>
+                            <div class="rec-6"></div>
+                        </div>
+                        <img class="name-frame" src="1x/name-frame.png">
+                    </div>
+                    <div class="squares" id="squares-2">
+                        <div class="square" id="top-square-4"></div>
+                        <div class="square" id="top-square-5"></div>
+                    </div>
+                </div>
+
+                <div class="top-right">
+                    <nav class="nav">
+                        <ul class="ul">
+                            <li class="li"><a class="a home shuffle" href="index.html">Home</a></li>
+                            <li class="li about"><a class="a about shuffle" href="about.html">About</a></li>
+                            <li class="li works"><a class="a works shuffle" href="works.html">Works</a></li>
+                            <li class="li"><a class="a contact shuffle" href="contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="middle">
+                <div class="middle-left">
+                    <div class="squares" id="squares-3">
+                        <div class="square" id="square-6"></div>
+                        <div class="square" id="square-7"></div>
+                        <div class="square" id="square-8"></div>
+                    </div>
+                    <img class="star-left" src="1x/star-left.png">
+                    <div class="squares" id="squares-4">
+                        <div class="square" id="square-9"></div>
+                        <div class="square" id="square-10"></div>
+                        <div class="square" id="square-11"></div>
+                    </div>
+                    <img class="barcode" src="1x/barcode.png">
+                </div>
+                <div class="middle-right">
+                    <div class="squares" id="squares-5">
+                        <div class="square" id="square-12"></div>
+                        <div class="square" id="square-13"></div>
+                        <div class="square" id="square-14"></div>
+                    </div>
+                    <img class="ticket" src="1x/ticket.png">
+                    <div class="squares" id="squares-6">
+                        <div class="square" id="square-15"></div>
+                        <div class="square" id="square-16"></div>
+                        <div class="square" id="square-17"></div>
+                    </div>
+                    <img class="star-right" src="1x/star-right.png">
+                    <div class="squares" id="squares-7">
+                        <div class="square" id="square-18"></div>
+                        <div class="square" id="square-19"></div>
+                        <div class="square" id="square-20"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="bottom-left">
+                    <div class="bottom-left-1">
+                        <div class="square" id="square-21"></div>
+                        <img class="developed" src="1x/developed.png">
+                    </div>
+                    <div class="bottom-left-2">
+                        <div class="square" id="square-22"></div>
+                        <div class="square" id="square-23"></div>
+                        <img class="location" src="1x/location.png">
+                    </div>
+                    <div class="bottom-left-3">
+                        <div class="square" id="square-24"></div>
+                        <p class="joe">ジョー</p>
+                        <div class="square" id="square-25"></div>
+                    </div>
+                </div>
+                <div class="bottom-right">
+                    <img class="birth" src="1x/birthday.png">
+                    <img class="spinning-sphere" src="1x/spinning-sphere-2.gif">
+                </div>
+            </div>
+        </div>
+        <div class="content-frame">
+            <div class="frame-top">
+                <div class="top-1">
+             
+                        <img class="skill-frame-image" src="1x/about-skill-frame.png">
+          
+        
+                        <P class="skills">Skills</P>
+            
+                </div>
+                <div class="top-2">
+                    <img class="me-video" src="1x/me-video.gif">
+                </div>
+                <div class="top-3">
+                    <p class="title">Who ?</p>
+                    <p class="about-name typewritter"> <span>Name:</span> <span class="name-text">Dinh Nguyen Bao Chau</span></span></p>
+                    <p class="dob typewritter"><span>D.o.B:</span> <span class="dob-text"> 27.09.2005</span></p>
+                    <p class="gender typewritter"><span>Gender:</span> <span class="gender-text">Female</span></p>
+                    <p class="species typewritter"><span>Species:</span> <span class="species-text">Human</span></p>
+                </div>
+            </div>
+            <div class="frame-bottom">
+                <div class="frame-bottom-bg">
+                    <img class="frame-bottom-bg-image" src="1x/about-intro-frame.png">
+                </div>
+                <div class="about-intro">
+                    <p class="me-me">About me</p>
+                    <p class="intro">Hi there, welcome to my portfolio! I'm Dinh Nguyen Bao Chau, currently pursuing a major in Digital Media at RMIT University. My passions extend beyond the classroom—I have a deep love for traveling, a keen interest in archery, and an unwavering affection for dogs. Art is a constant source of inspiration for me, and I enjoy exploring its many forms and expressions. Through this portfolio, I invite you to journey through my creative endeavors and discover the world as I see it.</p>
+                </div>
+            </div>
+            <div class="frame-bottom-phone">
+                <div class="phone-skill">
+                    <h1>Skills</h1>
+                    <div class="skills-area">
+                        <div class="skill">
+                            <div class="skill-title">After Effect</div>
+                            <div class="skill-bar"></div>
+                            <div class="ae skill-fill">
+                            <span class="skill-percent">Beginner</span>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-title">Illustrator</div>
+                            <div class="skill-bar"></div>
+                            <div class="ai skill-fill">
+                            <span class="skill-percent">Intermediate</span>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-title">Photoshop</div>
+                            <div class="skill-bar"></div>
+                            <div class="pts skill-fill">
+                            <span class="skill-percent">Intermediate</span>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-title">Blender</div>
+                            <div class="skill-bar"></div>
+                            <div class="blender skill-fill">
+                            <span class="skill-percent">Beginner</span>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-title">Touchdesigner</div>
+                            <div class="skill-bar"></div>
+                            <div class="touchdesigner skill-fill">
+                            <span class="skill-percent">Beginner</span>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-title">Davinci Resolve</div>
+                            <div class="skill-bar"></div>
+                            <div class="davinci skill-fill">
+                            <span class="skill-percent">Intermediate</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="phone-about-me">
+                    <h1 class="about-me-phone">About me</h1>
+                    <img class="phone-about-me-frame" src="1x/about-intro-frame-phone.png">
+                    <p class="phone-about-me-intro">Hi there, welcome to my portfolio! I'm Dinh Nguyen Bao Chau, currently pursuing a major in Digital Media at RMIT University. My passions extend beyond the classroom—I have a deep love for traveling, a keen interest in archery, and an unwavering affection for dogs. Art is a constant source of inspiration for me, and I enjoy exploring its many forms and expressions. Through this portfolio, I invite you to journey through my creative endeavors and discover the world as I see it.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

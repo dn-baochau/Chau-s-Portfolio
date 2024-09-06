@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Libre+Barcode+128+Text&family=Monomaniac+One&family=Monsieur+La+Doulaise&family=Orbitron:wght@400..900&family=Oswald:wght@200..700&family=Pinyon+Script&family=Playwrite+FR+Moderne:wght@100..400&family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=VT323&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+    <header>
+        
+    </header>
+    <div id="preloader">
+        <canvas id="Matrix"></canvas>
+    </div>
+    
+    <main>
+        <div class="frame">
+            <div class="top">
+                <div class="top-left movable" data-value= -5>
+                    <a href="index.html">
+                        <img class="logo" src="1x/logo.png" alt="Logo">
+                    </a>
+                    <div class="squares" id="squares-1">
+                        <div class="square" id="top-square-1"></div>
+                        <div class="square" id="top-square-2"></div>
+                        <div class="square" id="top-square-3"></div>
+                    </div>
+                    <img class="play-button-frame" src="1x/play-button-frame.png">
+                    <div class="name-frame-container">
+                        <div class="rec-container">
+                            <div class="rec-1"></div>
+                            <div class="rec-2"></div>
+                            <div class="rec-3"></div>
+                            <div class="rec-4"></div>
+                            <div class="rec-5"></div>
+                            <div class="rec-6"></div>
+                        </div>
+                        <img class="name-frame" src="1x/name-frame.png">
+                    </div>
+                    <div class="squares" id="squares-2">
+                        <div class="square" id="top-square-4"></div>
+                        <div class="square" id="top-square-5"></div>
+                    </div>
+                </div>
+
+                <div class="top-right movable" data-value="5">
+                    <nav class="nav">
+                        <ul class="ul">
+                            <li class="li home"><a class="a home shuffle" href="index.html">Home</a></li>
+                            <li class="li"><a class="a about shuffle" href="about.html">About</a></li>
+                            <li class="li"><a class="a works shuffle" href="works.html">Works</a></li>
+                            <li class="li"><a class="a contact shuffle" href="contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="middle">
+                <div class="middle-left movable">
+                    <div class="squares" id="squares-3">
+                        <div class="square" id="square-6"></div>
+                        <div class="square" id="square-7"></div>
+                        <div class="square" id="square-8"></div>
+                    </div>
+                    <img class="star-left" src="1x/star-left.png">
+                    <div class="squares" id="squares-4">
+                        <div class="square" id="square-9"></div>
+                        <div class="square" id="square-10"></div>
+                        <div class="square" id="square-11"></div>
+                    </div>
+                    <img class="barcode" src="1x/barcode.png">
+                </div>
+                <div class="middle-right movable">
+                    <div class="squares" id="squares-5">
+                        <div class="square" id="square-12"></div>
+                        <div class="square" id="square-13"></div>
+                        <div class="square" id="square-14"></div>
+                    </div>
+                    <img class="ticket" src="1x/ticket.png">
+                    <div class="squares" id="squares-6">
+                        <div class="square" id="square-15"></div>
+                        <div class="square" id="square-16"></div>
+                        <div class="square" id="square-17"></div>
+                    </div>
+                    <img class="star-right" src="1x/star-right.png">
+                    <div class="squares" id="squares-7">
+                        <div class="square" id="square-18"></div>
+                        <div class="square" id="square-19"></div>
+                        <div class="square" id="square-20"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="bottom-left">
+                    <div class="bottom-left-1">
+                        <div class="square" id="square-21"></div>
+                        <img class="developed" src="1x/developed.png">
+                    </div>
+                    <div class="bottom-left-2">
+                        <div class="square" id="square-22"></div>
+                        <div class="square" id="square-23"></div>
+                        <img class="location" src="1x/location.png">
+                    </div>
+                    <div class="bottom-left-3">
+                        <div class="square" id="square-24"></div>
+                        <p class="joe">ジョー</p>
+                        <div class="square" id="square-25"></div>
+                    </div>
+                </div>
+                <div class="bottom-right">
+                    <img class="birth" src="1x/birthday.png">
+                    <img class="spinning-sphere" src="1x/spinning-sphere-2.gif">
+                </div>
+            </div>
+        </div>
+        <div class="content-container">
+            <div class="scroll-tv">
+                <img class="tv-background" src="1x/background-1.png">
+                <div class="tv"></div>
+                <div class="hi-there"></div>
+            </div>
+            <div class="old-tv">
+                <video autoplay loop muted src="old-tv.mp4"></video>
+                <nav class="navbar">
+                    <ul class="nav-links">
+                      <li class="list"><a class="link about-2 shuffle" href="about.html">About</a></li>
+                      <li class="list"><a class="link work-2 shuffle" href="works.html">Works</a></li>
+                      <li class="list"><a class="link contact-2 shuffle" href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>  
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js"></script>
+    <script defer src="node_modules/swup/dist/swup.min.js"></script>
+    
+    <script src="script.js"></script>
+    <!-- <script>
+        document.addEventListener('DOMContentLoaded', () => {
+  const movableElementsWrapper = document.querySelector('.frame, .nav-links, .top-left ,.top-right'); // Chọn các phần tử chứa phần tử di chuyển
+  const movableElements = document.querySelectorAll('.movable'); // Chọn tất cả các phần tử di chuyển
+
+  // Thực hiện điều chỉnh với các phần tử di chuyển
+  const mouseMoveHandler = (e) => {
+    movableElements.forEach((movableElement) => {
+      const shiftValue = movableElement.getAttribute('data-value') || 1; // Cung cấp giá trị mặc định nếu không có
+      const moveX = (e.clientX * shiftValue) / 250;
+      const moveY = (e.clientY * shiftValue) / 250;
+
+      gsap.to(movableElement, { x: moveX, y: moveY, duration: 1 });
+    });
+  };
+
+  // Thực hiện điều chỉnh với throttle để giảm số lần gọi hàm
+  const throttledMouseMoveHandler = throttled(200, mouseMoveHandler);
+
+  movableElementsWrapper.addEventListener('mousemove', throttledMouseMoveHandler);
+
+  // Throttle Function
+  function throttled(delay, fn) {
+    let lastCall = 0;
+    return function (...args) {
+      const now = (new Date).getTime();
+      if (now - lastCall < delay) {
+        return;
+      }
+      lastCall = now;
+      return fn(...args);
+    }
+  }
+});
+    </script> -->
+</body>
+</html>
